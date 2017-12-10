@@ -1,4 +1,4 @@
-package de.karzek.weatherapp.Utils;
+package de.karzek.weatherapp.utils;
 
 import org.json.JSONObject;
 

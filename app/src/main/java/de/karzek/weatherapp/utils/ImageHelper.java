@@ -1,4 +1,4 @@
-package de.karzek.weatherapp;
+package de.karzek.weatherapp.utils;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
