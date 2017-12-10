@@ -15,6 +15,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,11 +38,17 @@ public class HomeFragment extends Fragment {
 
         setupMenuButtons();
         setupLocationButton();
+        setupForecastList();
 
         return view;
     }
 
+    private void setupForecastList() {
+        RecyclerView dailyForecastList = view.findViewById(R.id.daily_forecast_list);
+    }
+
     private void setupLocationButton() {
+        //ToDo crop placeholder image
     }
 
     private void setupMenuButtons() {
