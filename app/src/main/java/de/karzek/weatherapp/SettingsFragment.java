@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * Created by marja on 27.11.2017.
+ * Created by MarjanaKarzek on 27.11.2017.
  */
 
 public class SettingsFragment extends Fragment {

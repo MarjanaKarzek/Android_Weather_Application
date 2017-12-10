@@ -22,7 +22,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 /**
- * Created by marja on 27.11.2017.
+ * Created by MarjanaKarzek on 27.11.2017.
  */
 
 public class HomeFragment extends Fragment {
