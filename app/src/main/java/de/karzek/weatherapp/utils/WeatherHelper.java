@@ -39,7 +39,7 @@ public class WeatherHelper {
             }
             reader.close();
 
-            JSONObject data = new JSONObject((json.toString()));
+            JSONObject data = new JSONObject(json.toString());
 
             if(data.getInt("cod") != 200){
                 return null;
