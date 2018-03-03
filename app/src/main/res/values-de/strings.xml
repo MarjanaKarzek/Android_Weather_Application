@@ -8,7 +8,9 @@
     <string name="plus">+</string>
     <string name="minus">-</string>
 
+    <string name="one">1</string>
     <string name="seven">7</string>
+    <string name="sixteen">16</string>
 
     <string name="set_to_current_location">Aktuellen Standort laden</string>
     <string name="days_of_weather_forecast">Anzahl Tage der Vorhersage</string>
@@ -20,4 +22,5 @@
     <string name="daily_push_notification_hint">Würdest du gerne täglich eine Benachrichtiung über das heutige Wetter erhalten?</string>
     <string name="clock_placeholder">8:00 Uhr</string>
     <string name="reset_to_default_settings">Auf Werkseinstellungen zurücksetzen</string>
+    <string name="settings_toast_current_location_set">Current location set</string>
 </resources>

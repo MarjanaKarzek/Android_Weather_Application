@@ -14,13 +14,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#88ffffff"
-        android:orientation="vertical">
-
-        <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/back_arrow_left_white" />
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
 
         <android.support.v7.widget.CardView
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -30,7 +26,7 @@
             android:layout_marginBottom="5dp"
             android:layout_marginEnd="20dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="45dp"
             card_view:cardCornerRadius="4dp"
             card_view:cardElevation="8dp">
 
@@ -55,11 +51,14 @@
                     android:layout_weight="1">
 
                     <Button
+                        android:id="@+id/settings_current_location"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_gravity="center"
                         android:background="@drawable/location_grey" />
+
                 </FrameLayout>
+
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
@@ -97,12 +96,14 @@
                     android:orientation="horizontal">
 
                     <Button
+                        android:id="@+id/settings_less_forecast"
                         android:layout_width="35dp"
                         android:layout_height="35dp"
                         android:text="@string/minus"
                         android:textColor="@color/colorTextPrimaryDark" />
 
                     <EditText
+                        android:id="@+id/settings_forecast_edit_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:inputType="number"
@@ -113,6 +114,7 @@
                         android:textColor="@color/colorTextPrimaryDark" />
 
                     <Button
+                        android:id="@+id/settings_more_forecast"
                         android:layout_width="35dp"
                         android:layout_height="35dp"
                         android:text="@string/plus"
@@ -153,6 +155,7 @@
                     android:orientation="vertical">
 
                     <RadioButton
+                        android:id="@+id/settings_celsius_option"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:checked="true"
@@ -160,6 +163,7 @@
                         android:textColor="@color/colorTextPrimary" />
 
                     <RadioButton
+                        android:id="@+id/settings_fahrenheit_option"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/fahrenheit"
@@ -250,4 +254,5 @@
             android:text="@string/reset_to_default_settings"/>
 
     </LinearLayout>
+
 </RelativeLayout>

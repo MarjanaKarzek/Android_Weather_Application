@@ -1,5 +1,7 @@
 package de.karzek.weatherapp;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_layout_main);
 
         setupFragments();
+        checkForSharedPreferences();
     }
 
     private void setupFragments() {
@@ -28,5 +31,17 @@ public class MainActivity extends AppCompatActivity {
         HomeFragment homeFragment = new HomeFragment();
         fragmentTransaction.replace(R.id.fragmentContainer, homeFragment);
         fragmentTransaction.commit();
+    }
+
+    private void checkForSharedPreferences() {
+        SharedPreferences sharedPreferences = getPreferences(Context.MODE_PRIVATE);
+        if(sharedPreferences.getInt("SettingsDaysOfWeatherForecast", -1) == -1){
+            //no default preferences available
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putInt("SettingsDaysOfWeatherForecast", 7);
+            editor.putInt("SettingsTemperatureMetrics", 0);
+            editor.putBoolean("SettingsDailyPushNotifications", false);
+            editor.commit();
+        }
     }
 }
