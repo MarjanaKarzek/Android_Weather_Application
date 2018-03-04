@@ -7,6 +7,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import de.karzek.weatherapp.ui.home.HomeFragment;
+
 /**
  * Created by MarjanaKarzek on 27.11.2017.
  */
