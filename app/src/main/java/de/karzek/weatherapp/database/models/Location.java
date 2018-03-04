@@ -1,38 +1,49 @@
 package de.karzek.weatherapp.database.models;
 
-import com.activeandroid.Model;
-import com.activeandroid.annotation.Column;
-import com.activeandroid.annotation.Table;
+import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 /**
  * Created by Marjana Karzek on 10.12.2017.
  */
 
-@Table(name = Location.TABLE_NAME)
-public class Location extends Model {
+public class Location extends RealmObject {
 
-    //Table name
-    public static  final String TABLE_NAME = "Locations";
-
-    //Columns
-    public static final String COLUMN_ID = "id";
-    public static final String COLUMN_NAME = "name";
-    public static final String COLUMN_LATITUDE = "latitude";
-    public static final String COLUMN_LONGITUDE = "longitude";
-
-    @Column(name = COLUMN_ID,
-            unique = true,
-            onUniqueConflict = Column.ConflictAction.REPLACE,
-            index = true)
-    private String id;
-
-    @Column(name = COLUMN_NAME)
+    @PrimaryKey
+    private int id;
     private String name;
-
-    @Column(name = COLUMN_LATITUDE)
     private String latitude;
-
-    @Column(name = COLUMN_LONGITUDE)
     private String longitude;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
 }

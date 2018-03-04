@@ -15,12 +15,9 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <meta-data android:name="weather_app_database" android:value="weather_app.de" />
-        <meta-data android:name="weather_app_database_version" android:value="1" />
     </application>
 
 </manifest>
