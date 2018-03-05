@@ -18,17 +18,14 @@ public class WeatherDay extends RealmObject {
     private String locationName;
     private String latitude;
     private String longitude;
-    private int weather_id;
-    private int temperature;
+    private String condition;
     private int temperatureMin;
     private int temperatureMax;
-    private int pressure;
     private int humidity;
     private int windSpeed;
-    private int windDirection;
-    private int clouds;
-    private long sunrise;
-    private long sunset;
+    private String windDirection;
+    //private long sunrise;
+    //private long sunset;
 
     public int getId() {
         return id;
@@ -62,20 +59,12 @@ public class WeatherDay extends RealmObject {
         this.longitude = longitude;
     }
 
-    public int getWeather_id() {
-        return weather_id;
+    public String getCondition() {
+        return condition;
     }
 
-    public void setWeather_id(int weather_id) {
-        this.weather_id = weather_id;
-    }
-
-    public int getTemperature() {
-        return temperature;
-    }
-
-    public void setTemperature(int temperature) {
-        this.temperature = temperature;
+    public void setCondition(String condition) {
+        this.condition = condition;
     }
 
     public int getTemperatureMin() {
@@ -94,14 +83,6 @@ public class WeatherDay extends RealmObject {
         this.temperatureMax = temperatureMax;
     }
 
-    public int getPressure() {
-        return pressure;
-    }
-
-    public void setPressure(int pressure) {
-        this.pressure = pressure;
-    }
-
     public int getHumidity() {
         return humidity;
     }
@@ -118,23 +99,15 @@ public class WeatherDay extends RealmObject {
         this.windSpeed = windSpeed;
     }
 
-    public int getWindDirection() {
+    public String getWindDirection() {
         return windDirection;
     }
 
-    public void setWindDirection(int windDirection) {
+    public void setWindDirection(String windDirection) {
         this.windDirection = windDirection;
     }
 
-    public int getClouds() {
-        return clouds;
-    }
-
-    public void setClouds(int clouds) {
-        this.clouds = clouds;
-    }
-
-    public long getSunrise() {
+    /*public long getSunrise() {
         return sunrise;
     }
 
@@ -148,6 +121,6 @@ public class WeatherDay extends RealmObject {
 
     public void setSunset(long sunset) {
         this.sunset = sunset;
-    }
+    }*/
 
 }
