@@ -1,10 +1,5 @@
 package de.karzek.weatherapp.utils;
 
-
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -42,23 +37,14 @@ public class WeatherHelper {
             String call = WUNDERGROUND_API + WUNDERGROUND_API_KEY + WUNDERGROUND_FORECAST + WUNDERGROUND_GEOLOOKUP + WUNDERGROUND_EXTRA + latitude + "," + longitude + ".json";
             URL url = new URL(call);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-
-            BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-            StringBuffer json = new StringBuffer(1024);
-            String tmp = "";
-            while ((tmp = reader.readLine()) != null){
-                json.append(tmp).append("\n");
-            }
-            reader.close();
-
-            JSONObject data = new JSONObject(json.toString());
-
             int successCode = connection.getResponseCode();
+
             if(successCode != 200){
-                Timber.d("Weather retrieval failed with error code %i", successCode);
+                Timber.d("WeatherDayResponse retrieval failed with error code %i", successCode);
                 return null;
             } else {
                 WeatherDay currentWeather = new WeatherDay();
+                //currentWeather.setLocationName();
 
                 currentWeather.setLatitude(latitude);
                 currentWeather.setLongitude(longitude);
@@ -71,5 +57,6 @@ public class WeatherHelper {
             e.printStackTrace();
             Timber.d("Unexpected error");
         }
+        return null;
     }
 }

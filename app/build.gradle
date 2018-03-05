@@ -37,8 +37,15 @@ dependencies {
     compile 'io.realm:realm-android:0.82.1'
     //Timber
     compile 'com.jakewharton.timber:timber:4.5.1'
+    //Retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    //Retrofit Gson
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    //Lombok
+    provided 'org.projectlombok:lombok:1.16.20'
 
     testCompile 'junit:junit:4.12'
+
 }
 
 repositories {
